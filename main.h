@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <starg.h>
+#include <stdarg.h>
 
 #ifndef _MAIN_H_
 #define _MAIN_H_
