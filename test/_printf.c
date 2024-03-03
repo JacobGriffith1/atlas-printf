@@ -1,28 +1,31 @@
 #include "main.h"
 
 /**
- * specs - Prints characters according to specifications
- * @s: Conversion specifier
- * @arg: Argument
- * Return: 0
+ * specCheck - Prints characters according to specifications
+ * @s: Conversion specifier.
+ * @arg: Argument containing text to be printed.
+ * Return: Command to run; as dictated by the argument.
  */
 
-int specs(char s, va_list arg)
+int specCheck(char s, va_list arg)
 {
-	unsigned int i;
-	int specs;
+	int i;
 
-	specs[] = {
-		{"c", print_char}
-		{"d", print_int}
-		{"i", print_int}
-		{"s", print_str}
+	specStruct specList[] = {
+		{"c", print_char},
+		{"d", print_int},
+		{"i", print_int},
+		{"s", print_str},
+		{NULL, NULL}
 	};
 
-	for (i = 0; specs[i] != NULL; i++)
+	for (i = 0; specList[i].spec != NULL; i++)
 	{
-		if (specs[i] == s)
-			return (specs[i + 1]);
+		if (specList[i].spec[0] == s)
+			return (specList[i].func(arg));
+	}
+	return (0);
+}
 
 /**
  * _printf - Produces output according to a format.
@@ -33,6 +36,7 @@ int specs(char s, va_list arg)
 int _printf(const char *format, ...)
 {
 	unsigned int i;
+	int printType = 0, printCount = 0;
 	va_list arg;
 
 	va_start (arg, format);
@@ -41,3 +45,20 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
+		if (format[i] != '%');
+		{
+			_putchar(format[i]);
+			printCount++;
+		}
+		if (format[i + 1] == '%')
+		{
+			_putchar('%');
+			printCount++;
+			i++;
+		}
+		if (format[i + 1] == '\0')
+			return (-1);
+	}
+	va_end(arg);
+	return (printCount);
+}
