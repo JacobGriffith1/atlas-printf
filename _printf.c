@@ -46,19 +46,19 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] != '%')
+		if (format[i] == '\0')
+			return (-1);
+		if (format[i] == '%')
 		{
-			_putchar(format[i]);
+			_putchar('%');
 			printCount++;
 		}
 		else
 		{
-			i++
-			if (format[i] == '\0')
-				return (-1);
-
-			printCount += specCheck(format[i], arg);
+			_putchar(format[i]);
+			printCount++;
 		}
+		printCount += specCheck (format[i], arg);
 	}
 	va_end(arg);
 	return (printCount);
