@@ -43,5 +43,20 @@ int print_int(va_list arg)
 /**
  * print_str - Writes a string to stdout
  * @arg: Argument
- * Return: String to be printed
+ * Return: Number of characters printed
  */
+
+int print_str(va_list arg)
+{
+	int i, printCount = 0;
+	char *str = va_arg(arg, char*);
+
+	for (i = 0; str[i]; i++)
+	{
+		if (str[i] == NULL)
+			break;
+		_putchar(str[i]);
+		printCount++;
+	}
+	return (printCount);
+}
