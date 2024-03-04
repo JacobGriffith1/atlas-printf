@@ -53,7 +53,7 @@ int print_str(va_list arg)
 
 	for (i = 0; str[i]; i++)
 	{
-		if (str[i] == NULL)
+		if (str[i] == '\0')
 			break;
 		_putchar(str[i]);
 		printCount++;
