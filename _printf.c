@@ -37,7 +37,7 @@ int specCheck(char s, va_list arg)
 int _printf(const char *format, ...)
 {
 	unsigned int i;
-	int printCount = 0;
+	int printCount = 0, printedType;
 	va_list arg;
 
 	va_start(arg, format);
@@ -46,8 +46,6 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i + 1] == '\0')
-			return (-1);
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
@@ -58,6 +56,19 @@ int _printf(const char *format, ...)
 			_putchar('%');
 			printCount++;
 			i++;
+		}
+		if (format[i + 1] == '\0')
+			return (-1);
+
+		printedType = specCheck(format[i + 1], arg);
+		if (printedType == -1 || printedType != 0)
+			i++;
+		if (printedType > 0)
+			printCount += printedType;
+		if (printedType == 0)
+		{
+			_putchar('%');
+			printCount++;
 		}
 	}
 	va_end(arg);
