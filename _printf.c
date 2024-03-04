@@ -55,16 +55,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-<<<<<<< HEAD
 			_putchar(format[i]);
-			printCount++;
-=======
 			i++;
-			if (format[i] == '\0')
-				return (-1);
-
-			printCount += specCheck(format[i], arg);
->>>>>>> a0b31bd691609601ae374d0d458026c885f8fb3a
 		}
 		printCount += specCheck (format[i], arg);
 	}
