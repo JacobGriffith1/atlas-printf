@@ -50,17 +50,15 @@ int _printf(const char *format, ...)
 		{
 			_putchar(format[i]);
 			printCount++;
-			continue;
 		}
-		if (format[i] == '%')
+		else
 		{
-			_putchar('%');
-			printCount++;
-			i++;
-			continue;
-		}
-		if (format[i + 1] == '\0')
+			i++
+		if (format[i] == '\0')
 			return (-1);
+		{
+			printCount += specCheck(format[i], arg);
+		}
 	}
 	va_end(arg);
 	return (printCount);
