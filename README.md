@@ -37,4 +37,12 @@ Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wal
 > - va_end (man 3 va_end)
 > - va_copy (man 3 va_copy)
 > - va_arg (man 3 va_arg)
+
+**Project Files**
+
+> - _printf.c
+> - _putchar.c
+> - functions
+> - main.h
+> - man_3_printf
 (add more just tweaking the page)
