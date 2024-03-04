@@ -51,16 +51,14 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			printCount++;
 		}
-		if (format[i + 1] == '%')
+		else
 		{
-			_putchar('%');
-			printCount++;
 			i++;
-		}
-		if (format[i + 1] == '\0')
-			return (-1);
+			if (format[i] == '\0')
+				return (-1);
 
-		printCount += specCheck(format[i], arg);
+			printCount += specCheck(format[i], arg);
+		}
 	}
 	va_end(arg);
 	return (printCount);
