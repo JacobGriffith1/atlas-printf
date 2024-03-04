@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stddef.h>
-#include <stdarg>
 
 /**
  * specCheck - Prints characters according to specifications
@@ -27,7 +26,7 @@ int specCheck(char s, va_list arg)
 		{
 			va_list arg_copy;
 			va_copy(arg_copy, arg);
-			in resul = specList[i].func(arg_copy);
+			int result = specList[i].func(arg_copy);
 			va_end(arg_copy);
 			return result;
 		}
