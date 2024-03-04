@@ -37,7 +37,7 @@ int specCheck(char s, va_list arg)
 int _printf(const char *format, ...)
 {
 	unsigned int i;
-	int printCount = 0, printedType;
+	int printCount = 0, printedType = 0;
 	va_list arg;
 
 	va_start(arg, format);
