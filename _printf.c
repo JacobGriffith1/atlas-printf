@@ -50,16 +50,18 @@ int _printf(const char *format, ...)
 		{
 			_putchar(format[i]);
 			printCount++;
+			continue;
 		}
 		if (format[i + 1] == '%')
 		{
 			_putchar('%');
 			printCount++;
 			i++;
+			continue;
 		}
 		if (format[i + 1] == '\0')
 			return (-1);
 	}
 	va_end(arg);
-	return (printCount - 1);
+	return (printCount);
 }
