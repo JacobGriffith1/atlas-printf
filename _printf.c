@@ -54,8 +54,10 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
+			if (format[i] == '%')
+				_putchar(0);
 			if (format[i] == '\0')
-			return (-1);
+				return (-1);
 
 			printCount += specCheck(format[i], arg);
 		}
