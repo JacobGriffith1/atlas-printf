@@ -10,6 +10,9 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 int specCheck(char s, va_list arg);
+int print_char(va_list arg);
+int print_int(va_list arg);
+int print_str(va_list arg);
 
 /**
  * struct specStruct - Structure to hold information about the print type.
