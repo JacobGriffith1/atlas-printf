@@ -59,18 +59,7 @@ int _printf(const char *format, ...)
 		}
 		if (format[i + 1] == '\0')
 			return (-1);
-
-		printedType = specCheck(format[i + 1], arg);
-		if (printedType == -1 || printedType != 0)
-			i++;
-		if (printedType > 0)
-			printCount += printedType;
-		if (printedType == 0)
-		{
-			_putchar('%');
-			printCount++;
-		}
 	}
 	va_end(arg);
-	return (printCount);
+	return (printCount - 1);
 }
