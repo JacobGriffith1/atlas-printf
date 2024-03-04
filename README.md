@@ -1,11 +1,10 @@
 # This is a README file for the project _printf :page_facing_up:
-
-authorized by Jacob Griffith and Tamara Walling
+created by Jacob Griffith and Tamara Walling
 
 #This project consists of:
 (list our functions)
 
-using the prototype: "int _printf(const char *format, ...);"
+by using the prototype: "int _printf(const char *format, ...);"
 
 ## Requirements
 
@@ -45,4 +44,7 @@ Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wal
 > - functions
 > - main.h
 > - man_3_printf
+
+### Description
+This code is a simplified version of the "printf" function in C. This code includes header files such as 'main.h' and '<stddef.h>. 
 (add more just tweaking the page)

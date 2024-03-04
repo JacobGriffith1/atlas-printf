@@ -1,0 +1,8 @@
+.TH C-Printf printf\-0.1
+.SH NAME
+Printf \- prints
+.SH SYNOPSIS
+.B Printf
+.RB [ \_c
+.IR prints a character ]
+.BR Printf "..."
