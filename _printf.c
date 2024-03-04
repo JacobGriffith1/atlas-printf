@@ -52,7 +52,7 @@ int _printf(const char *format, ...)
 			printCount++;
 			continue;
 		}
-		if (format[i + 1] == '%')
+		if (format[i] == '%')
 		{
 			_putchar('%');
 			printCount++;
