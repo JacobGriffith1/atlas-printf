@@ -1,12 +1,11 @@
 # This is a README file for the project _printf :page_facing_up:
-(input readme image here)
 
-by Jacob Griffith and Tamara Walling
-(insert)
+authorized by Jacob Griffith and Tamara Walling
 
 #This project consists of:
 (list our functions)
-# using the prototype: "int _printf(const char *format, ...);"
+
+using the prototype: "int _printf(const char *format, ...);"
 
 ## Requirements
 
