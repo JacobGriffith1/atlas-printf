@@ -8,26 +8,6 @@
  * Return: Command to run; as dictated by the argument.
  */
 
-int print_char(va_list arg) {
-    char c = va_arg(arg, int);
-    _putchar(c);
-    return 1;
-}
-
-int print_int(va_list arg) {
-    int num = va_arg(arg, int);
-    // Implement the logic to print an integer
-    printf("%d", num);
-    return 1;
-}
-
-int print_str(va_list arg) {
-    char *str = va_arg(arg, char *);
-    // Implement the logic to print a string
-    printf("%s", str);
-    return 1;
-}
-
 int specCheck(char s, va_list arg)
 {
 	int i;
