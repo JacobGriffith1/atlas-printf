@@ -1,10 +1,19 @@
 # This is a README file for the project _printf :page_facing_up:
 created by Jacob Griffith and Tamara Walling
 
-#This project consists of:
-(list our functions)
+This project consists of:
+> - _printf
+> - _putchar
+> - print_char
+> - print_int
+> - print_str
 
-by using the prototype: "int _printf(const char *format, ...);"
+Using the prototypes:
+> - int _printf(const char *format, ...);
+> - int _putchar(char c);
+> - int print_char(va_list arg);
+> - int print_int(va_list arg);
+> - int print_str(va_list arg);
 
 ## Requirements
 
@@ -41,10 +50,10 @@ Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wal
 
 > - _printf.c
 > - _putchar.c
-> - functions
+> - functions.c
 > - main.h
 > - man_3_printf
 
 ### Description
-This code is a simplified version of the "printf" function in C. This code includes header files such as 'main.h' and '<stddef.h>. 
-(add more just tweaking the page)
+This code is a simplified version of the "printf" function in C. This code includes header files "main.h" and <stddef.h>. 
+In this code, _printf prints text using an appropriate format determined by the argument. By iterating through 'specsList', a list of conversion specifiers, _printf is able to determine which conversion specifier to use by comparing the argument to a defining character in specsList. _printf is capable of printing with the %c, %d, %i, and %s conversion specifiers. 
