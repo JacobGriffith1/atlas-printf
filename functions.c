@@ -51,12 +51,25 @@ int print_str(va_list arg)
 	int i, printCount = 0;
 	char *str = va_arg(arg, char*);
 
-	for (i = 0; str[i]; i++)
+	if (str == NULL)
 	{
-		if (str[i] == '\0')
-			break;
+		str = malloc(sizeof(char) * 10);
+		allocated = 1;
+		if (str == NULL)
+		{
+			return (-1);
+		}
+		strcpy(str, "(null)");
+	}
+	while (str[i])
+	{
 		_putchar(str[i]);
+		i++;
 		printCount++;
+	}
+	if (allocated)
+	{
+		free(str);
 	}
 	return (printCount);
 }
