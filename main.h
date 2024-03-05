@@ -6,7 +6,6 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <stdio.h>
-#include <malloc.h>
 
 int _putchar(char c);
 int _printf(const char *format, ...);
