@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * print_char - Writes a character to stdout
@@ -48,7 +51,7 @@ int print_int(va_list arg)
 
 int print_str(va_list arg)
 {
-	int i, printCount = 0;
+	int i, printCount = 0, allocated = 0;
 	char *str = va_arg(arg, char*);
 
 	if (str == NULL)
