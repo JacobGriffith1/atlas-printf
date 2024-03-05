@@ -1,7 +1,7 @@
 # This is a README file for the project _printf :page_facing_up:
 created by Jacob Griffith and Tamara Walling
 
-This project consists of:
+This project consists of the functions:
 > - _printf
 > - _putchar
 > - print_char
