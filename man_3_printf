@@ -27,7 +27,7 @@ The function is similar to the standard C library function printf, but with a li
 .SH RETURN VALUE
 The
 .B _printf
-function returns the number of characters pritned (excluding the null byte used to terminate strings). If an error occurs, it returns -1.
+function returns the number of characters printed (excluding the null byte used to terminate strings). If an error occurs, it returns -1.
 
 .SH EXAMPLES
 Here is a simplified example of _printf:
@@ -35,7 +35,6 @@ Here is a simplified example of _printf:
 .B #include "main.h"
 .br
 .B #include <stdio.h>
-.br
 .br
 .B int main(void)
 .B {
@@ -45,7 +44,7 @@ Here is a simplified example of _printf:
 .B }
 
 .SH SEE ALSO
-printf(3), putchar(3)
+printf(3)
 
 .SH AUTHOR
 Jacob Griffith Tamara Walling
