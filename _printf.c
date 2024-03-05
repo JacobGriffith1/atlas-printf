@@ -12,19 +12,11 @@ int _printf(const char *format, ...)
 	unsigned int i, j, type;
 	int printCount = 0;
 	va_list arg;
-
-	specStruct specList[] = {
-		{"c", print_char},
-		{"d", print_int},
-		{"i", print_int},
-		{"s", print_str},
-		{NULL, NULL}
-	};
-
+	specStruct specList[] = {{"c", print_char}, {"d", print_int},
+		{"i", print_int}, {"s", print_str}, {NULL, NULL}};
 	va_start(arg, format);
 	if (format == NULL)
 		return (-1);
-
 	for (i = 0; format[i] != '\0'; i++)
 		if (format[i] != '%')
 		{
