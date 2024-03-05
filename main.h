@@ -21,7 +21,7 @@ int print_str(va_list arg);
 
 typedef struct specStruct
 {
-char *spec;
+char spec;
 int (*func)(va_list);
 } specStruct;
 
